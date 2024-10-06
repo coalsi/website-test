@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corey Silvia - Logo Design Quote</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <!-- Logo on the left -->
+        <div class="logo-box">
+            <a href="#home" aria-label="Corey Silvia - Home">
+                <span>COREY<strong>SILVIA</strong></span>
+            </a>
+        </div>
+
+        <!-- Navigation Menu -->
+		<nav class="menu" aria-label="Main Navigation">
+		    <ul>
+		        <li><a href="index.html#home">HOME</a></li>
+		        <li class="dropdown">
+		            <a href="index.html#services">SERVICES</a>
+		            <ul class="dropdown-menu">
+		                <li><a href="photography.html">Photography</a></li>
+		                <li><a href="quote-videography.html">Videography</a></li>
+		                <li><a href="quote-liverydesign.html">Livery Design</a></li>
+		                <li><a href="quote-webdesign.html">Web Design</a></li>
+		                <li><a href="quote-logo.html">Logo Design</a></li>
+		                <li><a href="quote-it.html">IT Consulting</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="index.html#articles">ARTICLES</a></li>
+		        <li><a href="index.html#about">ABOUT</a></li>
+		        <li><a href="index.html#contact">CONTACT</a></li>
+		    </ul>
+	</nav>    
+	</header>
+
+    <!-- Hero Section -->
+    <section id="logo" class="logo">
+        <div class="logo-content">
+            <h1 class="service-title service-title-gap">Logo Design Quote</h1>
+        </div>
+    </section>
+
+    <!-- Logo Design Quote Section -->
+    <section id="logo-quote" class="logo-quote-section">
+        <div class="logo-quote-container">
+            <h2>Get a Personalized Quote for Your Logo Design Project</h2>
+            <p>Please fill out the form below to receive a detailed quote tailored to your logo design needs.</p>
+            <form class="logo-quote-form" action="send-email.php" method="post" enctype="multipart/form-data">
+                <!-- Hidden Field to Identify Form Type -->
+                <input type="hidden" name="form_type" value="logo_design">
+
+                <!-- SECTION 1: Personal Information -->
+                <h3>Your Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="logo_name">Your Name<span>*</span></label>
+                        <input type="text" id="logo_name" name="logo_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="logo_email">Your Email<span>*</span></label>
+                        <input type="email" id="logo_email" name="logo_email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="logo_phone">Phone Number</label>
+                        <input type="tel" id="logo_phone" name="logo_phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="logo_company">Company Name</label>
+                        <input type="text" id="logo_company" name="logo_company" placeholder="Company Name">
+                    </div>
+                </div>
+
+                <!-- SECTION 2: Project Details -->
+                <h3>Project Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="logo_industry">Industry or Niche<span>*</span></label>
+                        <input type="text" id="logo_industry" name="logo_industry" placeholder="Your Industry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="logo_style">Preferred Style<span>*</span></label>
+                        <select id="logo_style" name="logo_style" required>
+                            <option value="" disabled selected>Select Style</option>
+                            <option value="modern">Modern</option>
+                            <option value="classic">Classic</option>
+                            <option value="playful">Playful</option>
+                            <option value="minimalist">Minimalist</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="abstract">Abstract</option>
+                            <option value="hand-drawn">Hand-Drawn</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="professional">Professional</option>
+                            <option value="bold">Bold</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="logo_colors">Preferred Colors</label>
+                        <input type="text" id="logo_colors" name="logo_colors" placeholder="e.g., Blue, Green, Red">
+                    </div>
+                    <div class="form-group">
+                        <label for="logo_usage">Logo Usage<span>*</span></label>
+                        <select id="logo_usage" name="logo_usage" required>
+                            <option value="" disabled selected>Select Usage</option>
+                            <option value="web">Web (Website, Social Media)</option>
+                            <option value="print">Print (Business Cards, Brochures)</option>
+                            <option value="merchandise">Merchandise (T-Shirts, Mugs)</option>
+                            <option value="all">All of the Above</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: Design Preferences -->
+                <h3>Design Preferences</h3>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="logo_inspiration">Inspiration & References</label>
+                        <textarea id="logo_inspiration" name="logo_inspiration" placeholder="Share any logos or designs you like (URLs, links, or descriptions)"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="logo_ideas">Specific Ideas or Symbols</label>
+                        <textarea id="logo_ideas" name="logo_ideas" placeholder="Do you have any specific symbols, icons, or ideas you'd like to incorporate?"></textarea>
+                    </div>
+                </div>
+
+                <!-- SECTION 4: Additional Information -->
+                <h3>Additional Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="logo_deadline">Desired Deadline</label>
+                        <input type="date" id="logo_deadline" name="logo_deadline">
+                    </div>
+                    <div class="form-group">
+                        <label for="logo_budget">Estimated Budget</label>
+                        <input type="text" id="logo_budget" name="logo_budget" placeholder="Your Budget">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="logo_additional_comments">Additional Comments</label>
+                        <textarea id="logo_additional_comments" name="logo_additional_comments" placeholder="Any additional comments or requirements"></textarea>
+                    </div>
+                </div>
+
+                <!-- SECTION 5: File Upload (Optional) -->
+                <h3>Upload Files (Optional)</h3>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="logo_files">Upload Reference Files</label>
+                        <input type="file" id="logo_files" name="logo_files[]" accept=".jpg, .jpeg, .png, .svg" multiple>
+                    </div>
+                </div>
+
+                <!-- SECTION 6: reCAPTCHA -->
+                <div class="form-row">
+                    <div class="recaptcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LfJ4UwqAAAAAP82IEShnVrK3F9nZqDxzA04KkTA"></div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-row">
+                    <button type="submit">Submit Quote Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#clients">Clients</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Me</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Legal Links -->
+            <div class="footer-legal">
+                <p>&copy; 2024 Corey Silvia. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

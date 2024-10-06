@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corey Silvia - Videography Quote</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <!-- Logo on the left -->
+        <div class="logo-box">
+            <a href="#home" aria-label="Corey Silvia - Home">
+                <span>COREY<strong>SILVIA</strong></span>
+            </a>
+        </div>
+
+        <!-- Navigation Menu -->
+		<nav class="menu" aria-label="Main Navigation">
+		    <ul>
+		        <li><a href="index.html#home">HOME</a></li>
+		        <li class="dropdown">
+		            <a href="index.html#services">SERVICES</a>
+		            <ul class="dropdown-menu">
+		                <li><a href="photography.html">Photography</a></li>
+		                <li><a href="quote-videography.html">Videography</a></li>
+		                <li><a href="quote-liverydesign.html">Livery Design</a></li>
+		                <li><a href="quote-webdesign.html">Web Design</a></li>
+		                <li><a href="quote-logo.html">Logo Design</a></li>
+		                <li><a href="quote-it.html">IT Consulting</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="index.html#articles">ARTICLES</a></li>
+		        <li><a href="index.html#about">ABOUT</a></li>
+		        <li><a href="index.html#contact">CONTACT</a></li>
+		    </ul>
+	</nav>    
+	</header>
+
+    <!-- Videography Quote Header -->
+    <section id="logo" class="logo">
+        <div class="logo-content">
+            <h1 class="service-title service-title-gap">Videography Quote</h1>
+        </div>
+    </section>
+
+
+    <!-- Videography Quote Section -->
+    <section id="videography-quote" class="logo-quote-section">
+        <div class="logo-quote-container">
+            <h2>Get a Personalized Quote for Your Videography Project</h2>
+            <p>Please fill out the form below to receive a detailed quote tailored to your videography needs.</p>
+            <form class="logo-quote-form" action="send-email.php" method="post" enctype="multipart/form-data">
+                <!-- Hidden Field to Identify Form Type -->
+                <input type="hidden" name="form_type" value="videography">
+
+                <!-- Personal Information Section -->
+                <h3>Personal Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="video_name">Your Name<span>*</span></label>
+                        <input type="text" id="video_name" name="video_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="video_email">Your Email<span>*</span></label>
+                        <input type="email" id="video_email" name="video_email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="video_phone">Your Phone Number</label>
+                        <input type="tel" id="video_phone" name="video_phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="video_company">Company Name / Event Name</label>
+                        <input type="text" id="video_company" name="video_company" placeholder="Company or Event Name">
+                    </div>
+                </div>
+
+                <!-- Videography Project Details Section -->
+                <h3>Project Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="video_event_type">Event Type<span>*</span></label>
+                        <select id="video_event_type" name="video_event_type" required>
+                            <option value="" disabled selected>Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="sports">Sports</option>
+                            <option value="motorsports">Motorsports</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="product">Product Videography</option>
+                            <option value="documentary">Documentary</option>
+                            <option value="music">Music Video</option>
+                            <option value="promotional">Promotional Video</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="video_event_location">Event Location<span>*</span></label>
+                        <input type="text" id="video_event_location" name="video_event_location" placeholder="Event or Shoot Location" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="video_project_description">Project Description<span>*</span></label>
+                        <textarea id="video_project_description" name="video_project_description" placeholder="Describe your videography needs" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Design Preferences Section -->
+                <h3>Preferences</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="video_style">Preferred Videography Style<span>*</span></label>
+                        <select id="video_style" name="video_style" required>
+                            <option value="" disabled selected>Select Style</option>
+                            <option value="cinematic">Cinematic</option>
+                            <option value="documentary">Documentary</option>
+                            <option value="traditional">Traditional</option>
+                            <option value="modern">Modern</option>
+                            <option value="music_video">Music Video Style</option>
+                            <option value="promo_style">Promotional</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="video_duration">Duration of Shoot<span>*</span></label>
+                        <select id="video_duration" name="video_duration" required>
+                            <option value="" disabled selected>Select Duration</option>
+                            <option value="half_day">Half Day (4 Hours)</option>
+                            <option value="full_day">Full Day (8 Hours)</option>
+                            <option value="custom">Custom Duration</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="video_inspiration">Inspiration & References</label>
+                        <textarea id="video_inspiration" name="video_inspiration" placeholder="Share any reference videos or styles you like (URLs or descriptions)"></textarea>
+                    </div>
+                </div>
+
+                <!-- Additional Information Section -->
+                <h3>Additional Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="video_deadline">Event Date / Deadline</label>
+                        <input type="date" id="video_deadline" name="video_deadline">
+                    </div>
+                    <div class="form-group">
+                        <label for="video_budget">Estimated Budget</label>
+                        <input type="text" id="video_budget" name="video_budget" placeholder="Your Budget">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="video_additional_comments">Additional Comments</label>
+                        <textarea id="video_additional_comments" name="video_additional_comments" placeholder="Any additional comments or requirements"></textarea>
+                    </div>
+                </div>
+
+                <!-- File Upload (Optional) -->
+                <h3>File Upload</h3>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="video_files">Upload Files (Optional)</label>
+                        <input type="file" id="video_files" name="video_files[]" accept=".mp4, .mov, .jpg, .jpeg, .png" multiple>
+                    </div>
+                </div>
+
+                <!-- reCAPTCHA -->
+                <div class="form-row">
+                    <div class="recaptcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LfJ4UwqAAAAAP82IEShnVrK3F9nZqDxzA04KkTA"></div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-row">
+                    <button type="submit">Submit Quote Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#clients">Clients</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Me</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-legal">
+                <p>&copy; 2024 Corey Silvia. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

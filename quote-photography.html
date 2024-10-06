@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corey Silvia - Photography Quote</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <!-- Logo on the left -->
+        <div class="logo-box">
+            <a href="#home" aria-label="Corey Silvia - Home">
+                <span>COREY<strong>SILVIA</strong></span>
+            </a>
+        </div>
+
+        <!-- Navigation Menu -->
+		<nav class="menu" aria-label="Main Navigation">
+		    <ul>
+		        <li><a href="index.html#home">HOME</a></li>
+		        <li class="dropdown">
+		            <a href="index.html#services">SERVICES</a>
+		            <ul class="dropdown-menu">
+		                <li><a href="photography.html">Photography</a></li>
+		                <li><a href="quote-videography.html">Videography</a></li>
+		                <li><a href="quote-liverydesign.html">Livery Design</a></li>
+		                <li><a href="quote-webdesign.html">Web Design</a></li>
+		                <li><a href="quote-logo.html">Logo Design</a></li>
+		                <li><a href="quote-it.html">IT Consulting</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="index.html#articles">ARTICLES</a></li>
+		        <li><a href="index.html#about">ABOUT</a></li>
+		        <li><a href="index.html#contact">CONTACT</a></li>
+		    </ul>
+	</nav>    
+	</header>
+
+    <!-- Photography Quote Header -->
+    <section id="logo" class="logo">
+        <div class="logo-content">
+            <h1 class="service-title service-title-gap">Photography Quote</h1>
+        </div>
+    </section>
+	
+
+    <!-- Photography Quote Section -->
+    <section id="photography-quote" class="logo-quote-section">
+        <div class="logo-quote-container">
+            <h2>Get a Personalized Quote for Your Photography Project</h2>
+            <a href="photography.html">
+			    <h3>View Gallery</h3>
+			</a>
+            <p>Please fill out the form below to receive a detailed quote tailored to your photography needs.</p>
+            <form class="logo-quote-form" action="send-email.php" method="post" enctype="multipart/form-data">
+                <!-- Hidden Field to Identify Form Type -->
+                <input type="hidden" name="form_type" value="photography">
+
+                <!-- Personal Information Section -->
+                <h3>Personal Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="photo_name">Your Name<span>*</span></label>
+                        <input type="text" id="photo_name" name="photo_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo_email">Your Email<span>*</span></label>
+                        <input type="email" id="photo_email" name="photo_email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="photo_phone">Your Phone Number</label>
+                        <input type="tel" id="photo_phone" name="photo_phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo_company">Company Name / Event Name</label>
+                        <input type="text" id="photo_company" name="photo_company" placeholder="Company or Event Name">
+                    </div>
+                </div>
+
+                <!-- Photography Project Details Section -->
+                <h3>Project Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="photo_event_type">Event Type<span>*</span></label>
+                        <select id="photo_event_type" name="photo_event_type" required>
+                            <option value="" disabled selected>Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="sports">Sports</option>
+                            <option value="motorsports">Motorsports</option>
+                            <option value="portrait">Portrait</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="nature_wildlife">Nature/Wildlife</option>
+                            <option value="product">Product Photography</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo_event_location">Event Location<span>*</span></label>
+                        <input type="text" id="photo_event_location" name="photo_event_location" placeholder="Event or Shoot Location" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="photo_project_description">Project Description<span>*</span></label>
+                        <textarea id="photo_project_description" name="photo_project_description" placeholder="Describe your photography needs" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Design Preferences Section -->
+                <h3>Preferences</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="photo_style">Preferred Photography Style<span>*</span></label>
+                        <select id="photo_style" name="photo_style" required>
+                            <option value="" disabled selected>Select Style</option>
+                            <option value="classic">Classic</option>
+                            <option value="modern">Modern</option>
+                            <option value="candid">Candid</option>
+                            <option value="editorial">Editorial</option>
+                            <option value="artistic">Artistic</option>
+                            <option value="black_white">Black & White</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo_duration">Duration of Shoot<span>*</span></label>
+                        <select id="photo_duration" name="photo_duration" required>
+                            <option value="" disabled selected>Select Duration</option>
+                            <option value="half_day">Half Day (4 Hours)</option>
+                            <option value="full_day">Full Day (8 Hours)</option>
+                            <option value="custom">Custom Duration</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="photo_inspiration">Inspiration & References</label>
+                        <textarea id="photo_inspiration" name="photo_inspiration" placeholder="Share any reference images, styles, or themes you like (URLs or descriptions)"></textarea>
+                    </div>
+                </div>
+
+                <!-- Additional Information Section -->
+                <h3>Additional Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="photo_deadline">Event Date / Deadline</label>
+                        <input type="date" id="photo_deadline" name="photo_deadline">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo_budget">Estimated Budget</label>
+                        <input type="text" id="photo_budget" name="photo_budget" placeholder="Your Budget">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="photo_additional_comments">Additional Comments</label>
+                        <textarea id="photo_additional_comments" name="photo_additional_comments" placeholder="Any additional comments or requirements"></textarea>
+                    </div>
+                </div>
+
+                <!-- File Upload (Optional) -->
+                <h3>File Upload</h3>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="photo_files">Upload Files (Optional)</label>
+                        <input type="file" id="photo_files" name="photo_files[]" accept=".jpg, .jpeg, .png, .svg" multiple>
+                    </div>
+                </div>
+
+                <!-- reCAPTCHA -->
+                <div class="form-row">
+                    <div class="recaptcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LfJ4UwqAAAAAP82IEShnVrK3F9nZqDxzA04KkTA"></div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-row">
+                    <button type="submit">Submit Quote Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#clients">Clients</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Me</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Legal Links -->
+            <div class="footer-legal">
+                <p>&copy; 2024 Corey Silvia. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

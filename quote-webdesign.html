@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corey Silvia - Web Design Quote</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <!-- Logo on the left -->
+        <div class="logo-box">
+            <a href="#home" aria-label="Corey Silvia - Home">
+                <span>COREY<strong>SILVIA</strong></span>
+            </a>
+        </div>
+
+        <!-- Navigation Menu -->
+		<nav class="menu" aria-label="Main Navigation">
+		    <ul>
+		        <li><a href="index.html#home">HOME</a></li>
+		        <li class="dropdown">
+		            <a href="index.html#services">SERVICES</a>
+		            <ul class="dropdown-menu">
+		                <li><a href="photography.html">Photography</a></li>
+		                <li><a href="quote-videography.html">Videography</a></li>
+		                <li><a href="quote-liverydesign.html">Livery Design</a></li>
+		                <li><a href="quote-webdesign.html">Web Design</a></li>
+		                <li><a href="quote-logo.html">Logo Design</a></li>
+		                <li><a href="quote-it.html">IT Consulting</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="index.html#articles">ARTICLES</a></li>
+		        <li><a href="index.html#about">ABOUT</a></li>
+		        <li><a href="index.html#contact">CONTACT</a></li>
+		    </ul>
+	</nav>    
+	</header>
+	
+<section id="logo" class="logo">
+    <div class="logo-content">
+        <h1 class="service-title service-title-gap">Web Site Design Quote</h1>
+    </div>
+</section>
+
+    <!-- Web Design Quote Section -->
+    <section id="web-quote" class="web-quote-section">
+        <div class="web-quote-container">
+            <h2>Get a Personalized Quote for Your Web Design Project</h2>
+            <p>Fill out the form below to receive a detailed, tailored quote for your web design project. Be as specific as possible to help us understand your needs.</p>
+
+            <form class="web-quote-form" action="send-email.php" method="POST" enctype="multipart/form-data">
+                <!-- Hidden Field to Identify Form Type -->
+                <input type="hidden" name="form_type" value="web_design">
+
+                <!-- Personal Information -->
+                <h3>Personal & Company Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="web_name">Your Name<span>*</span></label>
+                        <input type="text" id="web_name" name="web_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="web_email">Your Email<span>*</span></label>
+                        <input type="email" id="web_email" name="web_email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="web_phone">Phone Number</label>
+                        <input type="tel" id="web_phone" name="web_phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="web_company">Company Name</label>
+                        <input type="text" id="web_company" name="web_company" placeholder="Company Name">
+                    </div>
+                </div>
+
+                <!-- Project Information -->
+                <h3>Project Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="web_website">Current Website URL</label>
+                        <input type="url" id="web_website" name="web_website" placeholder="Current Website URL (if any)">
+                    </div>
+                    <div class="form-group">
+                        <label for="web_website_type">Select Website Type<span>*</span></label>
+                        <select id="web_website_type" name="web_website_type" required>
+                            <option value="" disabled selected>Select Website Type</option>
+                            <option value="basic">Talent/Athlete Website</option>
+                            <option value="single_product">Single Product Website (without Store)</option>
+                            <option value="multi_product">Multi-Product Website (Without Store)</option>
+                            <option value="single_product_store">Single Product Website (with Store)</option>
+                            <option value="multi_product_store">Multi-Product Website (with Store)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Design & Functionality Preferences -->
+                <h3>Design & Functionality Preferences</h3>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="web_project_description">Project Description<span>*</span></label>
+                        <textarea id="web_project_description" name="web_project_description" placeholder="Describe your project in detail" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="web_inspiration">Provide Examples or Inspiration</label>
+                        <textarea id="web_inspiration" name="web_inspiration" placeholder="List any websites that you admire or that inspire your project vision"></textarea>
+                    </div>
+                </div>
+
+                <!-- Features Needed -->
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label>Which Features Do You Need?<span>*</span></label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="features[]" value="responsive_design"> Responsive Design</label>
+                            <label><input type="checkbox" name="features[]" value="seo_optimization"> SEO Optimization</label>
+                            <label><input type="checkbox" name="features[]" value="cms"> Content Management System (CMS)</label>
+                            <label><input type="checkbox" name="features[]" value="ecommerce"> E-commerce Functionality</label>
+                            <label><input type="checkbox" name="features[]" value="blog"> Blog Setup</label>
+                            <label><input type="checkbox" name="features[]" value="contact_forms"> Contact Forms</label>
+                            <label><input type="checkbox" name="features[]" value="social_media"> Social Media Integration</label>
+                            <label><input type="checkbox" name="features[]" value="newsletter_signup"> Newsletter Signup</label>
+                            <label><input type="checkbox" name="features[]" value="custom_graphics"> Custom Graphics</label>
+                            <label><input type="checkbox" name="features[]" value="analytics"> Analytics Setup</label>
+                            <label><input type="checkbox" name="features[]" value="email_management"> Email Management</label>
+                            <label><input type="checkbox" name="features[]" value="domain_selection"> Domain Selection</label>
+                            <label><input type="checkbox" name="features[]" value="web_hosting"> Web Hosting</label>
+                            <label><input type="checkbox" name="features[]" value="professional_photography"> Professional Photography</label>
+                            <label><input type="checkbox" name="features[]" value="professional_videography"> Professional Videography</label>
+                            <label><input type="checkbox" name="features[]" value="mobile_applications"> Mobile Applications</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <h3>Additional Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="web_pages">Estimated Number of Pages</label>
+                        <input type="number" id="web_pages" name="web_pages" placeholder="Number of Pages" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="web_deadline">Desired Deadline</label>
+                        <input type="date" id="web_deadline" name="web_deadline">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="web_budget">Estimated Budget</label>
+                        <input type="text" id="web_budget" name="web_budget" placeholder="Estimated Budget">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="web_additional_comments">Additional Comments or Special Requirements</label>
+                        <textarea id="web_additional_comments" name="web_additional_comments" placeholder="Any additional comments or requirements"></textarea>
+                    </div>
+                </div>
+
+                <!-- File Upload (Optional) -->
+                <h3>Upload Relevant Files</h3>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="web_files">Upload Files (Optional)</label>
+                        <input type="file" id="web_files" name="web_files[]" accept=".jpg, .jpeg, .png, .svg, .pdf" multiple>
+                        <small>You can upload images, logos, or any files related to your project. Max file size: 5MB each.</small>
+                    </div>
+                </div>
+
+                <!-- reCAPTCHA -->
+                <div class="form-row">
+                    <div class="recaptcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LfJ4UwqAAAAAP82IEShnVrK3F9nZqDxzA04KkTA"></div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-row">
+                    <button type="submit">Submit Quote Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#clients">Clients</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Me</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Legal Links -->
+            <div class="footer-legal">
+                <p>&copy; 2024 Corey Silvia. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
